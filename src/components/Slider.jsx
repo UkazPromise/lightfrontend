@@ -9,6 +9,7 @@ const Container = styled.div`
         carousel{
             display: 380px;
         }
+
     }
 `
 const Img = styled.img`

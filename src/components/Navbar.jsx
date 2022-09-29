@@ -37,10 +37,19 @@ const Right = styled.div`
     font-weight: 500;
 `
 
-const NavbarLink = styled.div`
+const NavbarLink = styled.a`
     font-size: 14px;
     cursor: pointer;
     margin-left: 25px;
+    text-decoration: none;
+
+    &:hover {
+            box-shadow: inset 100px 0 0 0 teal;
+            color: white;
+            cursor: pointer;
+            transform: translateY(0) scale(1.2);
+        } 
+    }
 
     @media (max-width: 700px) {
         display: none;
@@ -60,25 +69,6 @@ const OpenLinkButton = styled.button`
     }
 `;
 
-const NavbarExtendedContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media (min-width: 700px) {
-        display: none;
-    }
-`;
-
-const NavbarLinkExtended = styled.link`
-    color: white;
-    font-size: x-large;
-    cursor: pointer;
-    text-decoration: none;
-    margin: 10px;
-
-`;
-
 const Navbar = () => {
 
   return (
@@ -86,10 +76,10 @@ const Navbar = () => {
         <Wrapper>
             <Left><Logo>LIGHT24/7</Logo></Left>
             <Right>
-                <NavbarLink to="/">HOME</NavbarLink>
-                <NavbarLink to="About">ABOUT US</NavbarLink>
-                <NavbarLink to="Projects">PROJECTS</NavbarLink>
-                <NavbarLink to="Contact">CONTACT US</NavbarLink>
+                <NavbarLink href="#Home">HOME</NavbarLink>
+                <NavbarLink href="#About">ABOUT US</NavbarLink>
+                <NavbarLink href="#Projects">PROJECTS</NavbarLink>
+                <NavbarLink href="#Contact">CONTACT US</NavbarLink>
                 <OpenLinkButton>
                     &#8801;
                 </OpenLinkButton>

@@ -7,7 +7,7 @@ import { mobile } from "../src/responsive";
 
 const Container = styled.div`
     display: flex;
-    background-color: teal;
+    background-color: #2B3856;
     color: white;
     ${mobile({ flexDirection: "column"})}
 `;
@@ -20,7 +20,7 @@ const Left = styled.div`
 `;
 
 const Logo = styled.h1`
-
+    color: white;
 `
 const Desc = styled.p`
     margin: 20px 0px;
@@ -35,6 +35,7 @@ const Center = styled.div`
 
 const Title = styled.h3`
     margin-bottom: 30px;
+    color: white;
 `;
 const List = styled.ul`
     margin: 0;
@@ -97,7 +98,10 @@ const Footer = () => {
             <Title>Contact</Title>
             <SocialContainer>
                 <SocialIcon color="25D366">
-                    <WhatsAppIcon/> 
+                <a href="https://api.whatsapp.com/send/?phone=2348064747096"
+                    className="WhatsApp">
+                    <WhatsAppIcon/>
+                </a>
                 </SocialIcon>
             </SocialContainer>
             <ContactItem>
@@ -107,7 +111,7 @@ const Footer = () => {
                 <PhoneIcon style={{marginRight:"10px"}}/> +2347056674363
             </ContactItem>
             <ContactItem>
-                <MailOutlineIcon style={{marginRight:"10px"}} /> contact@light24/7.com
+                <MailOutlineIcon style={{marginRight:"10px"}} /> light24/7@gmail.com
             </ContactItem>
         </Right>
     </Container>
